@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   text-align: center;
 }
 
@@ -14,19 +15,16 @@ nav ul {
   list-style: none;
   background-color: green;
 }
-
-nav ul li {
+nav li {
   display: inline-block;
   padding: 1em;
 }
-
-nav ul li a {
+nav a {
   color: black;
   text-decoration: none;
   transition: color 200ms, text-shadow 200ms;
 }
-
-nav ul li a:hover {
+nav a:hover {
   color: orange;
   cursor: pointer;
   text-shadow: 1px 1px 1px black;
@@ -36,3 +34,5 @@ nav ul li a:hover {
   height: 100vh;
   padding-top: 45vh;
 }
+
+/*# sourceMappingURL=style.css.map */
