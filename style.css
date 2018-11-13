@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -33,6 +34,48 @@ nav a:hover {
 #welcome-section {
   height: 100vh;
   padding-top: 45vh;
+}
+#welcome-section h2 {
+  font-size: 100%;
+  padding-top: 1em;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.container img {
+  max-width: 100%;
+}
+.container .project-title {
+  width: calc(100%/3 - 2em);
+  padding: 10px;
+  margin: 1em;
+  background-color: gray;
+  border: 1px solid black;
+}
+.container a {
+  text-decoration: none;
+  color: black;
+}
+
+#complete {
+  margin-top: 2em;
+}
+#complete a {
+  text-decoration: none;
+}
+
+#contact {
+  margin: 4em 0;
+}
+#contact .profile-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2em 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

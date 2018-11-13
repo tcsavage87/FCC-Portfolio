@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -35,4 +36,52 @@ nav {
 #welcome-section {
   height: 100vh;
   padding-top: 45vh;
+  
+  h2 {
+    font-size: 100%;
+    padding-top: 1em;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .project-title {
+    width: calc(100%/3 - 2em);
+    padding: 10px;
+    margin: 1em;
+    background-color: gray;
+    border: 1px solid black;
+  }
+  
+  a {
+      text-decoration: none;
+      color: black;
+  }
+}
+
+#complete {
+  margin-top: 2em;
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+#contact {
+  margin: 4em 0;
+  
+  .profile-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 2em 1em;
+  }
 }
