@@ -66,7 +66,7 @@ nav {
   img {
     max-width: 100%;
     border-radius: 10px 10px;
-    transition: all .25s ease-in-out;
+    transition: all .25s ease;
   }
   
   img:hover {
@@ -87,7 +87,7 @@ nav {
 
 a#profile-link {
     display: block;
-  margin: 0em auto;
+    margin: 0em auto;
     width: 25%;
     text-align: center;
     text-decoration: none;
@@ -121,7 +121,6 @@ a#profile-link {
   }
 }
 
-
 #master {
   display: flex;
   flex: 1;
@@ -129,22 +128,23 @@ a#profile-link {
   align-items: center;
   justify-content: center;
 }
+
 .key {
-  border: .4rem solid black;
+  border: .25rem solid black;
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
-  padding: 1rem .5rem;
+  padding: 1rem;
+  width: 12rem;
   transition: all .07s ease;
-  width: 10rem;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  color: #e0ebe8;
+  background: #4AB19A;
+  text-shadow: 0 0 .1rem black;
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
+  border-color: #F6D546;
   box-shadow: 0 0 1rem #ffc600;
 }
