@@ -119,6 +119,9 @@ a#profile-link :hover {
   align-items: center;
   justify-content: center;
 }
+#master button:hover {
+  cursor: pointer;
+}
 
 .key {
   border: 0.25rem solid black;
