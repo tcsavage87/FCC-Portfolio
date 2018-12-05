@@ -9,13 +9,20 @@ body {
   text-align: center;
 }
 
+header {
+    background-color: #4AB19A;
+    height: 3em;
+    width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
 nav {
   ul {
     position: fixed;
     text-align: right;
     width: 100%;
     list-style: none;
-    background-color: green;
   }
   li {
     display: inline-block;
@@ -24,23 +31,29 @@ nav {
   a {
     color: black;
     text-decoration: none;
-    transition: color 200ms, text-shadow 200ms;
+    transition: color 200ms;
   }
   a:hover {
     color: orange;
     cursor: pointer;
-    text-shadow: 1px 1px 1px black;
   }
 }
 
 #welcome-section {
+  background-color: #4AB19A;
   height: 100vh;
-  padding-top: 45vh;
-  
-  h2 {
-    font-size: 100%;
+  padding-top: 35vh;
+  img {
     padding-top: 1em;
   }
+  p {
+    padding-top: 1em;
+  }
+}
+
+#projects {
+  padding: 2em;
+  background-color: #e0ebe8;
 }
 
 .container {
@@ -49,39 +62,89 @@ nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  
+
   img {
     max-width: 100%;
+    border-radius: 10px 10px;
+    transition: all .25s ease-in-out;
   }
   
+  img:hover {
+    transform: scale(1.05);
+    z-index: 0;
+  }
+
   .project-title {
-    width: calc(100%/3 - 2em);
-    padding: 10px;
-    margin: 1em;
-    background-color: gray;
-    border: 1px solid black;
+    width: calc(100%/3);
+    padding: 25px 10px;
   }
-  
+
   a {
-      text-decoration: none;
-      color: black;
+    text-decoration: none;
+    color: black;
   }
 }
 
-#complete {
-  margin-top: 2em;
-  
-  a {
+a#profile-link {
+    display: block;
+  margin: 0em auto;
+    width: 25%;
+    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    background-color: #4AB19A;
+  border-radius: 5px 5px;
+  
+  #complete {
+  padding: 1em;
   }
+  
+  :hover {
+    color: white;
+  }
+}
+
+#help {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 1em;
 }
 
 #contact {
   margin: 4em 0;
-  
+
   .profile-link {
     display: inline-block;
     text-decoration: none;
     padding: 2em 1em;
   }
+}
+
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
 }
