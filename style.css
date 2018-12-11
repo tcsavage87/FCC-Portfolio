@@ -42,8 +42,8 @@ nav a:hover {
   height: 100vh;
   padding-top: 35vh;
 }
-#welcome-section img {
-  padding-top: 1em;
+#welcome-section canvas {
+  cursor: pointer;
 }
 #welcome-section p {
   padding-top: 1em;

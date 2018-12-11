@@ -1,93 +1,116 @@
 // Arrow Canvas code
 
-const canvas = document.querySelector('#arrow');
+const canvas = document.querySelector("#arrow");
 
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
-ctx.lineWidth = 3;
-
-let arrowFirst = false;
-let arrowSecond = false;
-let arrowThird = false;
+let arrowCount = 0;
+ctx.lineWidth = 7;
 
 // First arrow segment function
 
+let makeArrow1 = function() {
+  ctx.strokeStyle = "white";
+
+  ctx.beginPath();
+  ctx.moveTo(5, 35);
+  ctx.lineTo(35, 35);
+  ctx.stroke();
+  console.log("arrow1");
+};
+
 let arrow1 = function() {
-  if (arrowThird === false) {
-
-    ctx.strokeStyle = 'white';
-
-    ctx.beginPath();
-    ctx.moveTo(5, 35);
-    ctx.lineTo(35, 35);
-    ctx.stroke();
-
-    arrowFirst = true;
+  if (arrowCount === 0) {
+    makeArrow1();
+    arrowCount = 1;
   } else {
     clear();
   }
-}
+};
 
 // Second arrow segment function
 
+let makeArrow2 = function() {
+  ctx.strokeStyle = "gray";
+  ctx.beginPath();
+  ctx.moveTo(40, 35);
+  ctx.lineTo(70, 35);
+  ctx.stroke();
+  console.log("arrow2");
+};
+
 let arrow2 = function() {
-  if (arrowFirst === true) {
-    ctx.strokeStyle = 'gray';
-
-    ctx.beginPath();
-    ctx.moveTo(40, 35);
-    ctx.lineTo(70, 35);
-    ctx.stroke(); 
-
-    arrowSecond = true;
+  if (arrowCount === 1) {
+    makeArrow2();
+    arrowCount = 2;
   } else {
     arrow1();
   }
-}
+};
 
 // Third arrow segment function
 
+let makeArrow3 = function() {
+  ctx.beginPath();
+  ctx.moveTo(75, 35);
+  ctx.lineTo(75, 20);
+  ctx.lineTo(95, 35);
+  ctx.lineTo(75, 50);
+  ctx.fillStyle = "black";
+  ctx.fill();
+  console.log("arrow3");
+};
+
 let arrow3 = function() {
-  if (arrowSecond === true) {
-    ctx.beginPath();
-    ctx.moveTo(75, 35);
-    ctx.lineTo(75, 20);
-    ctx.lineTo(95, 35);
-    ctx.lineTo(75, 50);
-    ctx.fillStyle = 'black';
-    ctx.fill();
-
-    arrowThird = true;
-
+  if (arrowCount === 2) {
+    makeArrow3();
+    arrowCount = 3;
   } else {
     arrow2();
   }
-}
+};
 
 // arrow reset
 
-let clear = function() {
-  if (arrowThird === true) {
+function clear() {
+  if (arrowCount === 3) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    console.log('cleared!');
-    [arrowFirst, arrowSecond, arrowThird] = [false, false, false];
+    console.log("cleared!");
+    arrowCount = 0;
   } else {
     arrow3();
   }
 }
 
-let drawing = false;
+// initiate arrow on load
 
-const drawArrow = function () {
-  if (drawing === false) {
-    setInterval(clear, 500); 
-    drawing = true;
+let drawArrow = window.setInterval(clear, 500);
+
+window.onload = drawArrow;
+
+// click functionality for arrow
+
+let solid = false;
+
+function solidArrow() {
+  if (!solid) {
+    window.clearInterval(drawArrow);
+    makeArrow1();
+    makeArrow2();
+    makeArrow3();
+    console.log("paused");
+    solid = true;
   } else {
-    drawing = false;
+    arrowCount = 3;
+    clear();
+    drawArrow = window.setInterval(clear, 500);
+    solid = false;
   }
 }
 
-window.onload = drawArrow;
+const canvasArea = document.getElementById("arrow");
+
+canvasArea.addEventListener("click", solidArrow);
 
 // Music player buttons
 
