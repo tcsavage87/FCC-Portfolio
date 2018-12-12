@@ -113,18 +113,30 @@ a#profile-link {
 
 #contact {
   margin: 4em 0;
+  min-height: 25vh;
+  display: inline-block;
 
-  .profile-link {
+  .profile-icon {
     display: inline-block;
-    text-decoration: none;
-    padding: 2em 1em;
+    margin: 1em;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  #github-icon {
+    width: 85px;
+    height: auto;
   }
 }
 
 #master {
   display: flex;
   flex: 1;
-  min-height: 50vh;
+  min-height: 25vh;
   align-items: center;
   justify-content: center;
 

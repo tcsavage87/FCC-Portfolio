@@ -105,17 +105,27 @@ a#profile-link :hover {
 
 #contact {
   margin: 4em 0;
-}
-#contact .profile-link {
+  min-height: 25vh;
   display: inline-block;
-  text-decoration: none;
-  padding: 2em 1em;
+}
+#contact .profile-icon {
+  display: inline-block;
+  margin: 1em;
+}
+#contact img {
+  width: 100px;
+  height: auto;
+  vertical-align: middle;
+}
+#contact #github-icon {
+  width: 85px;
+  height: auto;
 }
 
 #master {
   display: flex;
   flex: 1;
-  min-height: 50vh;
+  min-height: 25vh;
   align-items: center;
   justify-content: center;
 }
