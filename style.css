@@ -41,6 +41,7 @@ nav a:hover {
   background-color: #4AB19A;
   height: 100vh;
   padding-top: 35vh;
+  text-align: center;
 }
 #welcome-section canvas {
   cursor: pointer;
@@ -151,6 +152,15 @@ a#profile-link :hover {
   transform: scale(1.1);
   border-color: #F6D546;
   box-shadow: 0 0 1rem #ffc600;
+}
+
+footer {
+  margin-bottom: 2em;
+}
+
+footer a {
+  text-decoration: none;
+  color: purple;
 }
 
 /*# sourceMappingURL=style.css.map */
