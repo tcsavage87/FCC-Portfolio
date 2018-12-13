@@ -7,6 +7,11 @@
 html,
 body {
   text-align: center;
+  font-family: "Montserrat";
+}
+
+.cursive {
+  font-family: "Handlee", cursive;
 }
 
 header {
@@ -33,7 +38,7 @@ nav a {
   transition: color 200ms;
 }
 nav a:hover {
-  color: orange;
+  color: #F6D546;
   cursor: pointer;
 }
 
@@ -43,10 +48,15 @@ nav a:hover {
   padding-top: 35vh;
   text-align: center;
 }
+#welcome-section h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
 #welcome-section canvas {
   cursor: pointer;
 }
 #welcome-section p {
+  font-size: 115%;
   padding-top: 1em;
 }
 
@@ -95,13 +105,31 @@ a#profile-link #complete {
   padding: 1em;
 }
 a#profile-link :hover {
-  color: white;
+  color: #4AB19A;
+  background-color: white;
+  border-radius: 5px 5px;
 }
 
 #help {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
+  padding: 3em;
+  background-color: #ffc146;
+}
+#help div {
+  text-align: left;
+  width: 75%;
+  margin: 0 auto;
+  color: #403939;
+}
+#help ul {
+  text-align: left;
+  margin: 0 auto;
+  width: 75%;
   padding-top: 1em;
+}
+#help li {
+  margin: 1em;
 }
 
 #contact {
@@ -118,8 +146,8 @@ a#profile-link :hover {
   height: auto;
   vertical-align: middle;
 }
-#contact #github-icon {
-  width: 85px;
+#contact #linked-in {
+  width: 135px;
   height: auto;
 }
 
@@ -129,6 +157,7 @@ a#profile-link :hover {
   min-height: 25vh;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5em;
 }
 #master button:hover {
   cursor: pointer;
@@ -138,12 +167,14 @@ a#profile-link :hover {
   border: 0.25rem solid black;
   border-radius: 0.5rem;
   margin: 1rem;
-  font-size: 1.5rem;
-  padding: 1rem;
-  width: 12rem;
+  font-size: 1.35rem;
+  padding: 0 0.5rem;
+  width: 8rem;
+  height: 8rem;
   transition: all 0.07s ease;
   text-align: center;
-  color: #e0ebe8;
+  vertical-align: middle;
+  color: #fcfffc;
   background: #4AB19A;
   text-shadow: 0 0 0.1rem black;
 }
@@ -155,12 +186,12 @@ a#profile-link :hover {
 }
 
 footer {
-  margin-bottom: 2em;
+  padding: 2em;
+  background-color: #e0ebe8;
 }
-
 footer a {
   text-decoration: none;
-  color: purple;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

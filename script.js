@@ -6,18 +6,11 @@ const ctx = canvas.getContext("2d");
 
 let arrowCount = 0;
 ctx.lineWidth = 7;
+ctx.strokeStyle = "#b14a94";
 
 // First arrow segment function
 
 let makeArrow1 = function() {
-  //ctx.strokeStyle = "white";
-
-  let gradient = ctx.createLinearGradient(5, 35, 35, 35);
-
-  gradient.addColorStop(0, 'white');
-  gradient.addColorStop(.75, 'lightgray');
-  ctx.strokeStyle = gradient;
-
   ctx.beginPath();
   ctx.moveTo(5, 35);
   ctx.lineTo(35, 35);
@@ -37,13 +30,6 @@ let arrow1 = function() {
 // Second arrow segment function
 
 let makeArrow2 = function() {
-  //ctx.strokeStyle = "gray";
-
-  let gradient = ctx.createLinearGradient(35, 35, 70, 35);
-
-  gradient.addColorStop(0, 'lightgray');
-  gradient.addColorStop(.75, 'gray');
-  ctx.strokeStyle = gradient;
   ctx.beginPath();
   ctx.moveTo(35, 35);
   ctx.lineTo(70, 35);
@@ -63,17 +49,12 @@ let arrow2 = function() {
 // Third arrow segment function
 
 let makeArrow3 = function() {
-  let gradient = ctx.createLinearGradient(70, 35, 95, 35);
-  gradient.addColorStop(0, 'gray');
-  gradient.addColorStop(1, 'black');
-
-  ctx.fillStyle = gradient;
   ctx.beginPath();
   ctx.moveTo(70, 35);
   ctx.lineTo(70, 20);
   ctx.lineTo(95, 35);
   ctx.lineTo(70, 50);
-  //ctx.fillStyle = "black";
+  ctx.fillStyle = "#b14a94";
   ctx.fill();
   console.log("arrow3");
 };
@@ -86,6 +67,7 @@ let arrow3 = function() {
     arrow2();
   }
 };
+
 
 // arrow reset
 
@@ -104,6 +86,7 @@ function clear() {
 let drawArrow = window.setInterval(clear, 500);
 
 window.onload = drawArrow;
+
 
 // click functionality for arrow
 
